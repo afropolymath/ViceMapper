@@ -1,18 +1,25 @@
 package com.andelahackathon.vicemapper;
 
+import java.util.ArrayList;
+
 import com.firebase.client.DataSnapshot;
 
 public class Vars {
 	
 	private static String toLocation;
 	private static DataSnapshot snapRecords;
+	private static String fromLocation;
 	
-	public static void setToString(String toLocation) {
+	public static void setDirectionSet(String fromLocation, String toLocation) {
 		Vars.toLocation = toLocation;
+		Vars.fromLocation = fromLocation;
 	}
 	
-	public static String getToString() {
-		return Vars.toLocation;
+	public static ArrayList<String> getDirectionSet() {
+		ArrayList<String> resultSet = new ArrayList<String>();
+		resultSet.add(Vars.toLocation);
+		resultSet.add(Vars.fromLocation);
+		return resultSet;
 	}
 
 	public static DataSnapshot getSnapRecords() {

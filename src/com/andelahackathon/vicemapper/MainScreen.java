@@ -56,6 +56,7 @@ public class MainScreen extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				// Post fromLocation and toLocation to direction search API
+				Vars.setDirectionSet(getFromLocation(), getToLocation());
 			}
 		});
     }
